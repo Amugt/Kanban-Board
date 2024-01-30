@@ -8,8 +8,8 @@ const Team = ({teamData= []}) => {
 
   return (
     <div className="flex flex-row items-center flex-nowrap">
-      {visibleMembers.map((member) => (
-        <div key={member.id} className="-ml-4 bg-white rounded-full mx">
+      {visibleMembers.map((member,index) => (
+        <div key={index} className="-ml-4 bg-white rounded-full mx">
           <img
             src={member.avatar}
             alt={member.name}

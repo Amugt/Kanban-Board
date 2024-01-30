@@ -6,6 +6,7 @@ import {
   Plus,
   Bell,
   Logo,
+ 
 } from "../assets/IconsManager";
 import { ReactSVG } from "react-svg";
 import { photo1 } from "../assets/ImagesManager";
@@ -18,7 +19,7 @@ export default function Navbar() {
           <div className=" hidden sm:flex h-8 border-gray-300 border-l-[1px]"></div>
 
           <ReactSVG src={TrelloLogo} width={30} height={30} />
-          <h1 className="text-lg ">Boards</h1>
+          <h1 className="hidden text-lg sm:flex">Boards</h1>
           <div className=" hidden sm:flex h-8 border-gray-300 border-l-[1px]"></div>
           <ReactSVG src={Search} className="sm:hidden" width={20} height={20} />
           <div className=" hidden sm:flex    items-center overflow-hidden px-4 bg-[#F4F4F4] rounded-2xl w-[512px] h-[30px]">

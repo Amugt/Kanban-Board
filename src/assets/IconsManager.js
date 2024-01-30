@@ -12,7 +12,7 @@ import DotDot from "../assets/icons/Combined Shape.svg";
 import Attach from "../assets/icons/attach-outline.svg";
 import Message from "../assets/icons/message-square-outline.svg";
 import Logo from "../assets/icons/Logo.svg";
-
+import Globe from "../assets/icons/globe-2-outline.svg"
 
 export {
     Hard,
@@ -26,5 +26,6 @@ export {
     DotDot,
     Attach,
     Message,
-    Logo
+    Logo,
+    Globe
   };
