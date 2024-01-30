@@ -1,6 +1,6 @@
 import React,{ useState,useEffect } from "react";
 import { ReactSVG } from "react-svg";
-import { Hard, Heart, Public,  Globe } from "../assets/IconsManager";
+import { Hard, Heart, Globe } from "../assets/IconsManager";
 import Team from "./Team";
 import List from "./List";
 
@@ -61,9 +61,9 @@ export default function Board() {
   
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <div className="px-[16px] pt-16 sm:pt-20 ">
-        <div className="flex justify-between project_info">
-          <div className="gap-12  sm:flex">
+      <div className="px-[16px] pt-16 sm:pt-20 h-screen">
+        <div className="flex justify-between sm:items-center  h-[7vh] sm:h-[5vh] project_info ">
+          <div className="gap-12 sm:flex">
             <h1 className="text-2xl project_name">Brackets</h1>
             <div className="flex items-center gap-2">
               <ReactSVG src={Heart} />
@@ -81,7 +81,7 @@ export default function Board() {
             <h1 className="text-xl text-black"> Menu</h1>
           </div>
         </div>
-        <div className="flex flex-row gap-4 overflow-x-auto flex-nowrap">
+        <div className="flex flex-row gap-4 overflow-x-scroll flex-nowrap">
           {listsArray.map((list) => {
             const cards = list.cardIds.map((cardId) => state.cards[cardId]);
             return <List key={list.id} list={list} cards={cards} />;

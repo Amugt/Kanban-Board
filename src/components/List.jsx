@@ -6,17 +6,17 @@ import { Droppable } from "react-beautiful-dnd";
 import AddCard from "./AddCard";
 export default function List({ list, cards }) {
   return (
-    <div className="my-[10px] w-full sm:w-[362px] overflow-x-auto flex-shrink-0">
+    <div className="my-[10px] w-[288px]  sm:w-[322px] lg:w-[342px] xl:w-[362px] overflow-x-auto flex-shrink-0">
       <div className="rounded-xl py-[10px] bg-[#F4F4F4] list_title p-4 flex items-center justify-between">
         <h1 className="text-lg ">{list.title}</h1>
-        <ReactSVG src={DotDot} />
+        <ReactSVG src={DotDot} /> 
       </div>
       <Droppable droppableId={list.id}>
         {(provided) => (
           <div 
           ref={provided.innerRef}
           {...provided.droppableProps}
-          className="flex flex-col my-[10px] gap-[10px]   min-h-24">
+          className="flex flex-col my-[10px] h-[67vh]  gap-[10px]  overflow-y-auto  min-h-24">
             {cards.map((card, index) => (
               <Card key={card.id} card={card} index={index}  />
             ))}

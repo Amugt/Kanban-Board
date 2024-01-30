@@ -24,7 +24,7 @@ const Team = ({teamData= []}) => {
         </div>
       )}
      {(teamData.length < maxVisibleMembers || teamData.length === 0) && (
-  <div className="bg-black -ml-4 text-white rounded-full  flex items-center justify-center h-[30px] w-[30px]">
+  <div className="bg-black -ml-4 text-lg text-white rounded-full  flex items-center justify-center h-[30px] w-[30px]">
     +
   </div>
 )}

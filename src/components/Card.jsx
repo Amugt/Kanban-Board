@@ -24,7 +24,7 @@ export default function Card({ card ,index}) {
         />
       )}
 
-      <div className="flex gap-2 flex-nowrap">
+      <div className="flex gap-2 mb-2 flex-nowrap">
         
       {statusColors.map((color, index) => (
         
@@ -32,24 +32,24 @@ export default function Card({ card ,index}) {
         ))}
       </div>
 
-      <h1 className="text-lg font-semibold">{card.title}</h1>
-      <p className="text-gray-500 text-md">{card.description}</p>
+      <h1 className="font-semibold sm:text-lg text-md">{card.title}</h1>
+      <p className="text-sm text-gray-500 sm:text-md">{card.description}</p>
       <div className="flex items-center justify-between pt-4 flex-nowrap">
         <div className="ml-4">
           <Team teamData={card.team} />
         </div>
-        <div className="flex gap-3 flex-nowrap">
+        <div className="flex gap-2 flex-nowrap sm:gap-3">
           <div className="flex items-center gap-1 text-gray-500">
             {card.messages}
             <ReactSVG src={Message} />
           </div>
           <div className="flex items-center gap-1 text-gray-500">
-            <ReactSVG src={Heart} />
             {card.likes}
+            <ReactSVG src={Heart} />
           </div>
           <div className="flex items-center gap-1 text-gray-500">
-            <ReactSVG src={Attach} />
             {card.attachments}
+            <ReactSVG src={Attach} />
           </div>
         </div>
       </div>
